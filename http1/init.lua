@@ -1,0 +1,11 @@
+print(wifi.sta.getip())
+wifi.setmode(wifi.STATION)
+wifi.sta.config("ScreamingSilence", "Knowledge_Is_P0w3r")
+wifi.sta.connect()
+tmr.delay(1000000)
+print(wifi.sta.getip())
+
+sk = net.createConnection(net.TCP, 0)
+--sk:on("receiver", function(sck, c) print(c) end)
+sk:connect(80,"121.41.33.127")
+print(sk:send("GET / HTTP/1.1\r\nHost: www.nodemcu.com\r\n".."Connection: keep-alive\r\nAccept: */*\r\n\r\n"))
