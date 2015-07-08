@@ -1,5 +1,5 @@
-SSID = "-----"
-PWD = "-----"
+SSID = "ScreamingSilence"
+PWD = "Knowledge_Is_P0w3r"
 
 wifi.setmode(wifi.STATION)
 
